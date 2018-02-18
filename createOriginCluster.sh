@@ -15,3 +15,7 @@ az group deployment validate \
 
 
 ssh-agent bash -c 'ssh-add ~/.ssh/id_rsa; git push orgin master'
+
+
+
+
