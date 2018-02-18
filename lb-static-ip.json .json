@@ -1,0 +1,42 @@
+{
+			"type": "Microsoft.Network/loadBalancers",
+			"name": "[variables('masterLoadBalancerName')]",
+			"location": "[variables('location')]",
+			"apiVersion": "[variables('apiVersionNetwork')]",
+			"tags": {
+				"displayName": "OpenShiftMasterLB",
+				"provider": "[variables('redHatTags').provider]",
+				"app": "[variables('redHatTags').app]"
+			},
+			"properties": {
+				"frontendIPConfigurations": [{
+					"name": "LoadBalancerFrontEnd",
+					"properties": {
+						"subnet": {
+							"id": "[variables('masterSubnetRef')]"
+						  },
+						  "privateIPAddress": "10.0.2.6",
+						  "privateIPAllocationMethod": "Static"					}
+				}],
+				"backendAddressPools": [{
+					"name": "loadBalancerBackEnd"
+				}],
+				"loadBalancingRules": [{
+					"name": "OpenShiftAdminConsole",
+					"properties": {
+						"frontendIPConfiguration": {
+							"id": "[variables('masterLbFrontEndConfigId')]"
+						},
+						"backendAddressPool": {
+							"id": "[variables('masterLbBackendPoolId')]"
+						},
+						"protocol": "Tcp",
+						"loadDistribution": "SourceIP",
+						"idleTimeoutInMinutes": 30,
+						"frontendPort": 8443,
+						"backendPort": 8443,
+						"probe": {
+							"id": "[variables('masterLb8443ProbeId')]"
+						}
+					}
+				}, 

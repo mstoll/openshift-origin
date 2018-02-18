@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"_artifactsLocation": {
-			"value": "https://raw.githubusercontent.com/Microsoft/openshift-origin/master/"
+			"value": "https://raw.githubusercontent.com/mstoll/openshift-origin/master/"
 		},
 		"masterVmSize": {
 			"value": "Standard_DS2_v2"
@@ -15,10 +15,10 @@
 			"value": "Standard_DS2_v2"
 		},
 		"storageKind": {
-			"value": "changeme"
+			"value": "managed"
 		},
 		"openshiftClusterPrefix": {
-			"value": "changeme"
+			"value": "Mstoll-"
 		},
 		"masterInstanceCount": {
 			"value": 3
@@ -33,10 +33,10 @@
 			"value": 128
 		},
 		"adminUsername": {
-			"value": "changeme"
+			"value": "mstoll"
 		},
 		"openshiftPassword": {
-			"value": "changeme"
+			"value": "kjlkao340ß8##32"
 		},
 		"enableMetrics": {
 			"value": "false"
@@ -48,31 +48,48 @@
 			"value": "false"
 		},
 		"sshPublicKey": {
-			"value": "changeme"
+			"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD4EFDQEmS6BNa8xqWJ7gB0lkfVfTd4lkjdie69LgXM7setL672uUJhCQSRCxMf7yS7QtbWIsUSejGuexOlzE/6NE4A5US5wlp1C8j24LxMPLvHy2vjWo7Pak5DTwAekNto9I6Xj7WSNZNTF0zugV6pWRLmRFgrDywOOng6+k1NrW8E8mWP2mwn8nZIJl+7C3gTqWl++CI4RYKJxVxhURnOiScQoglqz/7Zqh4VvDJSXesJAnaNuuzXmkCW91Wp/xFs3y/YFLQsEhPZJxeJixc2ca7bQYmvIu4Wmt6NJ8Lw7vDGSc/9xQ9sp34jINGjcixIPAntIXSceGqoAlzte1U5"
 		},
 		"keyVaultResourceGroup": {
-			"value": "changeme"
+			"value": "mdp-origin"
 		},
 		"keyVaultName": {
-			"value": "changeme"
+			"value": "mdp-keyvault"
 		},
 		"keyVaultSecret": {
 			"value": "changeme"
 		},
 		"enableAzure": {
-			"value": "false"
+			"value": "true"
 		},
 		"aadClientId": {
-			"value": "changeme"
+			"value": "85487ffb-1c9b-47f3-a8bc-9348b6229044"
 		},
 		"aadClientSecret": {
-			"value": "changeme"
+			"value": "8390ca8c-dae0-4e9c-98e6-3a25ae499604"
 		},
 		"defaultSubDomainType": {
 			"value": "nipio"
 		},
 		"defaultSubDomain": {
-			"value": "changeme"
+			"value": "nipio"
+		},
+
+
+		"vnetName": {
+			"value": "mdp-poc-network"
+		},
+		"vnetRGName": {
+			"value": "mdp-poc-network"
+		},
+		"masterSubnetName": {
+			"value": "masterSubnet"
+		},
+		"nodeSubnetName": {
+			"value": "nodeSubnet"
 		}
+		
+		
+		
 	}
 }
