@@ -77,10 +77,10 @@
 
 
 		"vnetName": {
-			"value": "mdp-poc-network"
+			"value": "mdp-origin-net"
 		},
 		"vnetRGName": {
-			"value": "mdp-poc-network"
+			"value": "mdp-origin-net"
 		},
 		"masterSubnetName": {
 			"value": "masterSubnet"
