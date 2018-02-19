@@ -48,7 +48,7 @@
 			"value": "false"
 		},
 		"sshPublicKey": {
-			"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD4EFDQEmS6BNa8xqWJ7gB0lkfVfTd4lkjdie69LgXM7setL672uUJhCQSRCxMf7yS7QtbWIsUSejGuexOlzE/6NE4A5US5wlp1C8j24LxMPLvHy2vjWo7Pak5DTwAekNto9I6Xj7WSNZNTF0zugV6pWRLmRFgrDywOOng6+k1NrW8E8mWP2mwn8nZIJl+7C3gTqWl++CI4RYKJxVxhURnOiScQoglqz/7Zqh4VvDJSXesJAnaNuuzXmkCW91Wp/xFs3y/YFLQsEhPZJxeJixc2ca7bQYmvIu4Wmt6NJ8Lw7vDGSc/9xQ9sp34jINGjcixIPAntIXSceGqoAlzte1U5"
+			"value": "ssh-rsa /+k1NrW8E8mWP2mwn8nZIJl+7C3gTqWl++CI4RYKJxVxhURnOiScQoglqz/7Zqh4VvDJSXesJAnaNuuzXmkCW91Wp/xFs3y/YFLQsEhPZJxeJixc2ca7bQYmvIu4Wmt6NJ8Lw7vDGSc/9xQ9sp34jINGjcixIPAntIXSceGqoAlzte1U5"
 		},
 		"keyVaultResourceGroup": {
 			"value": "mdp-origin"
@@ -63,10 +63,10 @@
 			"value": "true"
 		},
 		"aadClientId": {
-			"value": "85487ffb-1c9b-47f3-a8bc-9348b6229044"
+			"value": "changeme"
 		},
 		"aadClientSecret": {
-			"value": "8390ca8c-dae0-4e9c-98e6-3a25ae499604"
+			"value": "changeme"
 		},
 		"defaultSubDomainType": {
 			"value": "nipio"
