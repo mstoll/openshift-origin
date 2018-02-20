@@ -1,0 +1,941 @@
+{
+  "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/mdp-deployment1",
+  "name": "mdp-deployment1",
+  "properties": {
+    "additionalProperties": {
+      "duration": "PT45M14.137686S",
+      "outputResources": [
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/infraavailabilityset",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/masteravailabilityset",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/nodeavailabilityset",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-0",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-0/extensions/prepNodes",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-1",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-1/extensions/prepNodes",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-0",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-0/extensions/deployOpenShift",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-1",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-1/extensions/deployOpenShift",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-2",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-2/extensions/deployOpenShift",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--node-0",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--node-0/extensions/prepNodes",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--infralb",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master0",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master1",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master2",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-0-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-1-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-0-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-1-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-2-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--node-0-nic",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--infra-nsg",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--master-nsg",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--node-nsg",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag2q2z6jwrcepqk6",
+          "resourceGroup": "mdp-origin"
+        },
+        {
+          "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/registrylziawgmkbckxs",
+          "resourceGroup": "mdp-origin"
+        }
+      ],
+      "templateHash": "7609007249017787853"
+    },
+    "correlationId": "41f7d9f7-de87-481b-bfa6-86659dc43eb7",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/registrylziawgmkbckxs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "registrylziawgmkbckxs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-0/extensions/deployOpenShift",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-0/deployOpenShift",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-1/extensions/deployOpenShift",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-1/deployOpenShift",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-2/extensions/deployOpenShift",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-2/deployOpenShift",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-0/extensions/prepNodes",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-0/prepNodes",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-1/extensions/prepNodes",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-1/prepNodes",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--node-0/extensions/prepNodes",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--node-0/prepNodes",
+            "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+          },
+          {
+            "additionalProperties": {
+              "actionName": "listKeys",
+              "apiVersion": "2015-06-15"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/registrylziawgmkbckxs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "registrylziawgmkbckxs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/OpenShiftDeployment",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "OpenShiftDeployment",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master0",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--masterlb/SSH-mstoll--master0",
+        "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master1",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--masterlb/SSH-mstoll--master1",
+        "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master2",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--masterlb/SSH-mstoll--master2",
+        "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master0",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb/SSH-mstoll--master0",
+            "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--master-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-0-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-0-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master1",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb/SSH-mstoll--master1",
+            "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--master-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-1-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-1-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--masterlb/inboundNatRules/SSH-mstoll--master2",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--masterlb/SSH-mstoll--master2",
+            "resourceType": "Microsoft.Network/loadBalancers/inboundNatRules"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--master-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-2-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-2-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--infralb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infralb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--infra-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-0-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--infra-0-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/loadBalancers/mstoll--infralb",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infralb",
+            "resourceType": "Microsoft.Network/loadBalancers"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--infra-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-1-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--infra-1-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkSecurityGroups/mstoll--node-nsg",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--node-nsg",
+            "resourceType": "Microsoft.Network/networkSecurityGroups"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--node-0-nic",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--node-0-nic",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-1-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-1-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-2-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-2-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/masteravailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masteravailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment0",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "masterVmDeployment0",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-1-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-1-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-2-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-2-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/masteravailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masteravailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment1",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "masterVmDeployment1",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-1-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-1-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--master-2-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--master-2-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/masteravailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masteravailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment2",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "masterVmDeployment2",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-1-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-1-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/infraavailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "infraavailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/infraVmDeployment0",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "infraVmDeployment0",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--infra-1-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--infra-1-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/infraavailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "infraavailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/infraVmDeployment1",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "infraVmDeployment1",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag2q2z6jwrcepqk6",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag2q2z6jwrcepqk6",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Network/networkInterfaces/mstoll--node-0-nic",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "mstoll--node-0-nic",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          },
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/availabilitySets/nodeavailabilityset",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "nodeavailabilityset",
+            "resourceType": "Microsoft.Compute/availabilitySets"
+          },
+          {
+            "additionalProperties": {
+              "apiVersion": "2017-06-01"
+            },
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Storage/storageAccounts/diag1h46kg5rh7hhzs",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "diag1h46kg5rh7hhzs",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/nodeVmDeployment0",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "nodeVmDeployment0",
+        "resourceType": "Microsoft.Resources/deployments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment0",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masterVmDeployment0",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-0/extensions/deployOpenShift",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-0/deployOpenShift",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment1",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masterVmDeployment1",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-1/extensions/deployOpenShift",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-1/deployOpenShift",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/masterVmDeployment2",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "masterVmDeployment2",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--master-2/extensions/deployOpenShift",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--master-2/deployOpenShift",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/infraVmDeployment0",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "infraVmDeployment0",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-0/extensions/prepNodes",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--infra-0/prepNodes",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/infraVmDeployment1",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "infraVmDeployment1",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--infra-1/extensions/prepNodes",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--infra-1/prepNodes",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Resources/deployments/nodeVmDeployment0",
+            "resourceGroup": "mdp-origin",
+            "resourceName": "nodeVmDeployment0",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mdp-origin/providers/Microsoft.Compute/virtualMachines/mstoll--node-0/extensions/prepNodes",
+        "resourceGroup": "mdp-origin",
+        "resourceName": "mstoll--node-0/prepNodes",
+        "resourceType": "Microsoft.Compute/virtualMachines/extensions"
+      }
+    ],
+    "mode": "Incremental",
+    "outputs": {},
+    "parameters": {
+      "_artifactsLocation": {
+        "type": "String",
+        "value": "https://raw.githubusercontent.com/mstoll/openshift-origin/master/"
+      },
+      "aadClientId": {
+        "type": "String",
+        "value": "85487ffb-1c9b-47f3-a8bc-9348b6229044"
+      },
+      "aadClientSecret": {
+        "type": "SecureString"
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "mstoll"
+      },
+      "dataDiskSize": {
+        "type": "Int",
+        "value": 128
+      },
+      "defaultSubDomain": {
+        "type": "String",
+        "value": "nipio"
+      },
+      "defaultSubDomainType": {
+        "type": "String",
+        "value": "nipio"
+      },
+      "enableAzure": {
+        "type": "String",
+        "value": "true"
+      },
+      "enableCockpit": {
+        "type": "String",
+        "value": "false"
+      },
+      "enableLogging": {
+        "type": "String",
+        "value": "false"
+      },
+      "enableMetrics": {
+        "type": "String",
+        "value": "false"
+      },
+      "infraInstanceCount": {
+        "type": "Int",
+        "value": 2
+      },
+      "infraVmSize": {
+        "type": "String",
+        "value": "Standard_DS2_v2"
+      },
+      "keyVaultName": {
+        "type": "String",
+        "value": "mdp-keyvault"
+      },
+      "keyVaultResourceGroup": {
+        "type": "String",
+        "value": "mdp-origin"
+      },
+      "keyVaultSecret": {
+        "type": "SecureString"
+      },
+      "masterInstanceCount": {
+        "type": "Int",
+        "value": 3
+      },
+      "masterSubnetName": {
+        "type": "String",
+        "value": "masterSubnet"
+      },
+      "masterVmSize": {
+        "type": "String",
+        "value": "Standard_DS2_v2"
+      },
+      "nodeInstanceCount": {
+        "type": "Int",
+        "value": 1
+      },
+      "nodeSubnetName": {
+        "type": "String",
+        "value": "nodeSubnet"
+      },
+      "nodeVmSize": {
+        "type": "String",
+        "value": "Standard_DS2_v2"
+      },
+      "openshiftClusterPrefix": {
+        "type": "String",
+        "value": "Mstoll-"
+      },
+      "openshiftPassword": {
+        "type": "SecureString"
+      },
+      "sshPublicKey": {
+        "type": "String",
+        "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD4EFDQEmS6BNa8xqWJ7gB0lkfVfTd4lkjdie69LgXM7setL672uUJhCQSRCxMf7yS7QtbWIsUSejGuexOlzE/6NE4A5US5wlp1C8j24LxMPLvHy2vjWo7Pak5DTwAekNto9I6Xj7WSNZNTF0zugV6pWRLmRFgrDywOOng6+k1NrW8E8mWP2mwn8nZIJl+7C3gTqWl++CI4RYKJxVxhURnOiScQoglqz/7Zqh4VvDJSXesJAnaNuuzXmkCW91Wp/xFs3y/YFLQsEhPZJxeJixc2ca7bQYmvIu4Wmt6NJ8Lw7vDGSc/9xQ9sp34jINGjcixIPAntIXSceGqoAlzte1U5"
+      },
+      "storageKind": {
+        "type": "String",
+        "value": "managed"
+      },
+      "vnetName": {
+        "type": "String",
+        "value": "mdp-origin-net"
+      },
+      "vnetRGName": {
+        "type": "String",
+        "value": "mdp-origin-net"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Network",
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "networkSecurityGroups"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "loadBalancers"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "loadBalancers/inboundNatRules"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "networkInterfaces"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Resources",
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "deployments"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Storage",
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts"
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Compute",
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "availabilitySets"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "locations": [
+              "westeurope"
+            ],
+            "properties": null,
+            "resourceType": "virtualMachines/extensions"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "template": null,
+    "templateLink": null,
+    "timestamp": "2018-02-20T11:09:48.063528+00:00"
+  },
+  "resourceGroup": "mdp-origin"
+}

@@ -281,7 +281,7 @@
 		
 	},
 	"variables": {
-		"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+		"vnetID": "[resourceId(parameters('vnetRGName'),'Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
 	    "masterSubnetRef": "[concat(variables('vnetID'),'/subnets/',parameters ('masterSubnetName'))]",
 	    "nodeSubnetRef": "[concat(variables('vnetID'),'/subnets/',parameters ('nodeSubnetName'))]",
 		"location": "[resourceGroup().location]",
@@ -933,7 +933,8 @@
 						"subnet": {
 							"id": "[variables('masterSubnetRef')]"
 						  },
-						  "privateIPAllocationMethod": "Dynamic"					
+						  "privateIPAddress": "10.0.0.200",
+						  "privateIPAllocationMethod": "Static"
 					}
 				}],
 				"backendAddressPools": [{
@@ -1036,7 +1037,8 @@
 						"subnet": {
 							"id": "[variables('masterSubnetRef')]"
 						  },
-						  "privateIPAllocationMethod": "Dynamic"					
+						  "privateIPAddress": "10.0.0.220",
+						  "privateIPAllocationMethod": "Static"
 					}
 				}],
 				"backendAddressPools": [{
@@ -1604,10 +1606,10 @@
 						"value": "[variables('openshiftMasterHostname')]"
 					},
 					"openshiftMasterPublicIpFqdn": {
-						"value": "mstollerfundenfqdn"
+						"value": "10.0.0.200"
 					},
 					"openshiftMasterPublicIpAddress": {
-						"value": "8.8.8.8"
+						"value": "10.0.0.200"
 					},
 					"openshiftInfraHostname": {
 						"value": "[variables('openshiftInfraHostname')]"
@@ -1652,7 +1654,7 @@
 						"value": "[parameters('aadClientSecret')]"
 					},
 					"nipioDomain": {
-						"value": "[concat('8.8.8.8', '.nip.io')]"
+						"value": "[concat('10.0.0.200', '.nip.io')]"
 					},
 					"customDomain": {
 						"value": "[variables('defaultSubDomain')]"
