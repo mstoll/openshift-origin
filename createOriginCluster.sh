@@ -8,7 +8,7 @@ masterSubnetName="masterSubnet"
 nodeSubnetName="nodeSubnet"
 vnetCidr="10.0.0.0/16"
 masterSubenetCidr="10.0.0.0/24"
-nodeSubnetCidr="10.0.1.0/24"
+#nodeSubnetCidr="10.0.1.0/24"
 keyVaultname="mdp-keyvault"
 secretName="sshPrivateKey"
 

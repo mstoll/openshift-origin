@@ -74,8 +74,6 @@
 		"defaultSubDomain": {
 			"value": "nipio"
 		},
-
-
 		"vnetName": {
 			"value": "mdp-origin-net"
 		},
@@ -87,9 +85,12 @@
 		},
 		"nodeSubnetName": {
 			"value": "masterSubnet"
+		},
+		"masterLBIp": {
+			"value": "10.0.0.200"
+		},
+		"infraLBIp": {
+			"value": "10.0.0.220"
 		}
-		
-		
-		
 	}
 }

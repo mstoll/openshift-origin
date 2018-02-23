@@ -278,6 +278,22 @@
 				"description": "Subnet for the node Nodes"
 			}
 		}
+		,
+		"masterLBIp": {
+			"type": "string",
+			"defaultValue": "nodeSubenet",
+			"metadata": {
+				"description": "Subnet for the node Nodes"
+			}
+		}
+		,
+		"infraLBIp": {
+			"type": "string",
+			"defaultValue": "nodeSubenet",
+			"metadata": {
+				"description": "Subnet for the node Nodes"
+			}
+		}
 		
 	},
 	"variables": {
@@ -933,7 +949,7 @@
 						"subnet": {
 							"id": "[variables('masterSubnetRef')]"
 						  },
-						  "privateIPAddress": "10.0.0.200",
+						  "privateIPAddress": "[parameters('masterLBIp')]",
 						  "privateIPAllocationMethod": "Static"
 					}
 				}],
@@ -1037,7 +1053,7 @@
 						"subnet": {
 							"id": "[variables('masterSubnetRef')]"
 						  },
-						  "privateIPAddress": "10.0.0.220",
+						  "privateIPAddress": "[parameters('infraLBIp')]",
 						  "privateIPAllocationMethod": "Static"
 					}
 				}],
