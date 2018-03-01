@@ -1,9 +1,12 @@
+# Keyvault Secrets 
+# https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-keyvault-parameter
+
 # https://github.com/Microsoft/openshift-origin
 
 rg="mdp-origin"
 networkRg="MDP_-_Data_Hub_PoC"
 location="WestEurope"
-vnetname="mdp-origin-net"
+vnetName="mdp-origin-net"
 masterSubnetName="masterSubnet"
 nodeSubnetName="nodeSubnet"
 vnetCidr="10.0.0.0/16"
@@ -15,16 +18,16 @@ secretName="sshPrivateKey"
 ##
 ##
 ##
-# az group create -n "$networkRg" -l WestEurope
+az group create -n "$networkRg" -l WestEurope
 
-# echo "Create a VNET to deploy K8s into an existing VNET"
-#  az network vnet create \
-# --name $vnetName \
-# --resource-group $networkRg \
-# --location westeurope \
-# --address-prefix $vnetCidr \
-# --subnet-name $subnetName \
-# --subnet-prefix $subnetCidr
+echo "Create a VNET to deploy K8s into an existing VNET"
+ az network vnet create \
+--name $vnetName \
+--resource-group $networkRg \
+--location westeurope \
+--address-prefix $vnetCidr \
+--subnet-name $nodeSubnetName \
+--subnet-prefix $masterSubenetCidr
 
 ##
 ##
