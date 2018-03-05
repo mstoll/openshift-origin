@@ -6,24 +6,15 @@
 rg="mdp-origin"
 networkRg="MDP_-_Data_Hub_PoC"
 location="WestEurope"
-<<<<<<< HEAD
 vnetName="mdp-poc-network"
 masterSubnetName="mdp-poc-network"
 #nodeSubnetName="nodeSubnet"
 vnetCidr="10.79.77.0/24"
 masterSubenetCidr="10.79.77.0/24"
-=======
-vnetName="mdp-origin-net"
-masterSubnetName="masterSubnet"
-nodeSubnetName="nodeSubnet"
-vnetCidr="10.0.0.0/16"
-masterSubenetCidr="10.0.0.0/24"
->>>>>>> c91cf7b8392ae52420fbfa5b7f7022a6bc1db5fd
 #nodeSubnetCidr="10.0.1.0/24"
 keyVaultname="mdp-keyvault"
 secretName="sshPrivateKey"
 
-<<<<<<< HEAD
 # az group create -n "$networkRg" -l WestEurope
 
 # echo "Create a VNET to deploy K8s into an existing VNET"
@@ -34,21 +25,6 @@ secretName="sshPrivateKey"
 # --address-prefix $vnetCidr \
 # --subnet-name $masterSubnetName \
 # --subnet-prefix $masterSubenetCidr
-=======
-##
-##
-##
-az group create -n "$networkRg" -l WestEurope
-
-echo "Create a VNET to deploy K8s into an existing VNET"
- az network vnet create \
---name $vnetName \
---resource-group $networkRg \
---location westeurope \
---address-prefix $vnetCidr \
---subnet-name $nodeSubnetName \
---subnet-prefix $masterSubenetCidr
->>>>>>> c91cf7b8392ae52420fbfa5b7f7022a6bc1db5fd
 
 ##
 ##
