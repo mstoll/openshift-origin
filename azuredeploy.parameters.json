@@ -75,22 +75,31 @@
 			"value": "nipio"
 		},
 		"vnetName": {
-			"value": "mdp-origin-net"
+			"value": "mdp-poc-network"
 		},
 		"vnetRGName": {
-			"value": "mdp-origin-net"
+			"value": "MDP_-_Data_Hub_PoC"
 		},
 		"masterSubnetName": {
-			"value": "masterSubnet"
+			"value": "mdp-poc-network"
 		},
 		"nodeSubnetName": {
-			"value": "masterSubnet"
+			"value": "mdp-poc-network"
 		},
 		"masterLBIp": {
-			"value": "10.0.0.200"
+			"value": "10.79.77.130"
 		},
 		"infraLBIp": {
-			"value": "10.0.0.220"
+			"value": "10.79.77.131"
+		},
+		"masterNodeFirstIp": {
+			"value": 134
+		},
+		"infraNodeFirstIp": {
+			"value": 132
+		},
+		"nodeNodeFirstIp": {
+			"value": 128
 		}
 	}
 }

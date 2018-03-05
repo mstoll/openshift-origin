@@ -1,0 +1,139 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+  },
+  "variables": {
+    "virtualNetworkName": "mstoll-hd-vnet",
+    "subnetName": "default",
+    "vnet-rg-name": "mstoll-hd1-vnet",
+    "loadBalancerName": "loadBalancerFrontEnd",
+    "vnetID": "[resourceId(variables('vnet-rg-name'),'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
+    "subnetRef": "[concat(variables('vnetID'),'/subnets/', variables('subnetName'))]",
+    "lbIp":"10.2.0.100",
+    "lbID": "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancerName'))]",
+    "frontEndIPConfigID": "[concat(variables('lbID'), '/frontendIPConfigurations/loadBalancerFrontEnd')]",
+    "apiVersion": "2015-06-15"
+  },
+  "resources": [
+    {
+      "apiVersion": "2015-06-15",
+      "name": "[variables('loadBalancerName')]",
+      "type": "Microsoft.Network/loadBalancers",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+      ],
+      "properties": {
+        "frontendIPConfigurations": [
+          {
+            "name": "LBFE",
+            "properties": {
+                "subnet": {
+                    "id": "[variables('subnetRef')]"
+                  },
+                  "privateIPAddress": "[variables('lbIp')]",
+                  "privateIPAllocationMethod": "Static"
+            }
+        }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "LBBE",
+                "properties": {
+                  "backendIPConfigurations": [
+                    {
+                      "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/networkInterfaces/nic-headnode-0-bd1971dd9d964ceea926b265b8f7764c/ipConfigurations/ipConfig1"
+                    },
+                    {
+                      "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/networkInterfaces/nic-headnode-1-bd1971dd9d964ceea926b265b8f7764c/ipConfigurations/ipConfig1"
+                    }
+                  ],
+                  "loadBalancingRules": [
+                    {
+                      "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/loadBalancingRules/ClusterInternal"
+                    }
+                  ]
+                }
+              }
+        ],
+        
+        "loadBalancingRules": [
+            {
+            "name": "ClusterInternal",
+            "properties": {
+                "frontendIPConfiguration": {
+                    "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/frontendIPConfigurations/LBFE"
+                },
+                "frontendPort": 443,
+                "backendPort": 443,
+                "enableFloatingIP": false,
+                "idleTimeoutInMinutes": 4,
+                "protocol": "Tcp",
+                "loadDistribution": "Default",
+                "backendAddressPool": {
+                    "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/backendAddressPools/LBBE"
+                },
+                "probe": {
+                    "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/probes/ClusterInternalprobe0"
+                }
+            }
+            }
+        ],
+        "probes": [
+            {
+              "name": "ClusterInternalprobe0",
+              "properties": {
+                "protocol": "Tcp",
+                "port": 443,
+                "intervalInSeconds": 15,
+                "numberOfProbes": 2,
+                "loadBalancingRules": [
+                  {
+                    "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/loadBalancingRules/ClusterInternal"
+                  }
+                ]
+              }
+            }
+          ],
+          "inboundNatRules": [
+            {
+              "name": "SSH0",
+              "properties": {
+                "provisioningState": "Succeeded",
+                "frontendIPConfiguration": {
+                  "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/frontendIPConfigurations/LBFE"
+                },
+                "frontendPort": 22,
+                "backendPort": 22,
+                "enableFloatingIP": false,
+                "idleTimeoutInMinutes": 4,
+                "protocol": "Tcp",
+                "backendIPConfiguration": {
+                  "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/networkInterfaces/nic-headnode-0-bd1971dd9d964ceea926b265b8f7764c/ipConfigurations/ipConfig1"
+                }
+              }
+            },
+            {
+              "name": "SSH11",
+              "properties": {
+                "provisioningState": "Succeeded",
+                "frontendIPConfiguration": {
+                  "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/loadBalancers/loadBalancerFrontEnd/frontendIPConfigurations/LBFE"
+                },
+                "frontendPort": 23,
+                "backendPort": 22,
+                "enableFloatingIP": false,
+                "idleTimeoutInMinutes": 4,
+                "protocol": "Tcp",
+                "backendIPConfiguration": {
+                  "id": "/subscriptions/91ad0cca-a631-443c-8b93-a0acc94385c3/resourceGroups/mstoll-hd1-vnet/providers/Microsoft.Network/networkInterfaces/nic-headnode-1-bd1971dd9d964ceea926b265b8f7764c/ipConfigurations/ipConfig1"
+                }
+              }
+            }
+          ],
+          "outboundNatRules": [],
+          "inboundNatPools": []              
+      }
+    }
+  ]
+}

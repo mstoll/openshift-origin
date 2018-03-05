@@ -191,7 +191,7 @@
 		"tenantId": "[subscription().tenantId]",
 		"subscriptionId": "[subscription().subscriptionId]",
 		"location": "[resourceGroup().location]",
-		"resourceGroupName": "[resourceGroup().name]",
+		"resourceGroupName": "[resourceGroup().name]"
 	},
 	"resources": [{
 		"type": "Microsoft.Compute/virtualMachines/extensions",

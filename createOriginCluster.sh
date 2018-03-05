@@ -3,18 +3,15 @@
 rg="mdp-origin"
 networkRg="MDP_-_Data_Hub_PoC"
 location="WestEurope"
-vnetname="mdp-origin-net"
-masterSubnetName="masterSubnet"
-nodeSubnetName="nodeSubnet"
-vnetCidr="10.0.0.0/16"
-masterSubenetCidr="10.0.0.0/24"
+vnetName="mdp-poc-network"
+masterSubnetName="mdp-poc-network"
+#nodeSubnetName="nodeSubnet"
+vnetCidr="10.79.77.0/24"
+masterSubenetCidr="10.79.77.0/24"
 #nodeSubnetCidr="10.0.1.0/24"
 keyVaultname="mdp-keyvault"
 secretName="sshPrivateKey"
 
-##
-##
-##
 # az group create -n "$networkRg" -l WestEurope
 
 # echo "Create a VNET to deploy K8s into an existing VNET"
@@ -23,8 +20,8 @@ secretName="sshPrivateKey"
 # --resource-group $networkRg \
 # --location westeurope \
 # --address-prefix $vnetCidr \
-# --subnet-name $subnetName \
-# --subnet-prefix $subnetCidr
+# --subnet-name $masterSubnetName \
+# --subnet-prefix $masterSubenetCidr
 
 ##
 ##
@@ -39,6 +36,9 @@ az keyvault secret set --vault-name $keyVaultname -n $secretName --file ~/.ssh/i
 
 echo "Create the K8s by deploying the generated ARM template"
 az group deployment create --debug --name "mdp-deployment1" --resource-group "$rg" --template-file "azuredeploy.json" --parameters "./azuredeploy.parameters.json" | tee openshift.log
+
+
+#az group deployment create --debug --name "mdp-deployment1" --resource-group "test" --template-file "hack-azuredeploy.json" --parameters "./azuredeploy.parameters.json" | tee openshift.log
 
 # az group delete -y --name $rg
 
