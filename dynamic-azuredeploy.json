@@ -1642,10 +1642,10 @@
 						"value": "[variables('openshiftMasterHostname')]"
 					},
 					"openshiftMasterPublicIpFqdn": {
-						"value": "10.0.0.200"
+						"value": "[parameters('masterLBIp')]"
 					},
 					"openshiftMasterPublicIpAddress": {
-						"value": "10.0.0.200"
+						"value": "[parameters('masterLBIp')]"
 					},
 					"openshiftInfraHostname": {
 						"value": "[variables('openshiftInfraHostname')]"
@@ -1690,7 +1690,7 @@
 						"value": "[parameters('aadClientSecret')]"
 					},
 					"nipioDomain": {
-						"value": "[concat('10.0.0.200', '.nip.io')]"
+						"value": "[concat(parameters('masterLBIp'), '.nip.io')]"
 					},
 					"customDomain": {
 						"value": "[variables('defaultSubDomain')]"
