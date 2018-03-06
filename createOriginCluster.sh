@@ -38,7 +38,7 @@ az keyvault secret set --vault-name $keyVaultname -n $secretName --file ~/.ssh/i
 # az group deployment validate --resource-group "$rg" --template-file "azuredeploy.json" --parameters "./azuredeploy.parameters.json"
 
 echo "Create the K8s by deploying the generated ARM template"
-az group deployment create --debug --name "mdp-deployment1" --resource-group "$rg" --template-file "fixedIP-azuredeploy.json" --parameters "./azuredeploy.parameters.json" | tee openshift.log
+az group deployment create --debug --name "mdp-deployment1" --resource-group "$rg" --template-file "dynamic-azuredeploy.json" --parameters "./azuredeploy.parameters.json" | tee openshift.log
 
 
 #az group deployment create --debug --name "mdp-deployment1" --resource-group "test" --template-file "hack-azuredeploy.json" --parameters "./azuredeploy.parameters.json" | tee openshift.log

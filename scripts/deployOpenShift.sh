@@ -30,6 +30,38 @@ export COCKPIT=${23}
 export AZURE=${24}
 export STORAGEKIND=${25}
 
+
+echo "-----------------------------------------------------------------------------"
+echo "SUDOUSER : " $SUDOUSER
+echo "PASSWORD : " $PASSWORD
+echo "PRIVATEKEY : " $PRIVATEKEY
+echo "MASTER : " $MASTER
+echo "MASTERPUBLICIPHOSTNAME : " $MASTERPUBLICIPHOSTNAME
+echo "MASTERPUBLICIPADDRESS : " $MASTERPUBLICIPADDRESS
+echo "INFRA : " $INFRA
+echo "NODE : " $NODE
+echo "NODECOUNT : " $NODECOUNT
+echo "INFRACOUNT : " $INFRACOUNT
+echo "MASTERCOUNT : " $MASTERCOUNT
+echo "ROUTING : " $ROUTING
+echo "REGISTRYSA : " $REGISTRYSA
+echo "ACCOUNTKEY : " $ACCOUNTKEY
+echo "TENANTID : " $TENANTID
+echo "SUBSCRIPTIONID : " $SUBSCRIPTIONID
+echo "AADCLIENTID : " $AADCLIENTID
+echo "AADCLIENTSECRET : " $AADCLIENTSECRET
+echo "RESOURCEGROUP : " $RESOURCEGROUP
+echo "LOCATION : " $LOCATION
+echo "METRICS : " $METRICS
+echo "LOGGING : " $LOGGING
+echo "COCKPIT : " $COCKPIT
+echo "AZURE : " $AZURE
+echo "STORAGEKIND : " $STORAGEKIND
+echo "-----------------------------------------------------------------------------"
+
+
+
+
 # Determine if Commercial Azure or Azure Government
 CLOUD=$( curl -H Metadata:true "http://169.254.169.254/metadata/instance/compute/location?api-version=2017-04-02&format=text" | cut -c 1-2 )
 export CLOUD=${CLOUD^^}

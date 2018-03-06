@@ -1648,7 +1648,6 @@
 						"value": "[parameters('masterLBIp')]"
 					},
 					"openshiftMasterPublicIpAddress": {
-						"value": "[parameters('masterLBIp')]"
 					},
 					"openshiftInfraHostname": {
 						"value": "[variables('openshiftInfraHostname')]"
